@@ -21,6 +21,31 @@ document.addEventListener(`DOMContentLoaded`, function() {
   ];
 
 
+let cellOptions = Array(9).fill(null);
 
+const playerX = 'X';
+const playerO = 'O';
+
+let firstPlayer = playerX;
+
+
+function setUpGame(){
+  gridCells = forEach((square, cell) => {
+    
+    square.addEventListener('hoverOn', function(e) {
+        e.target.classList.add('hover');
+    });
+
+    square.addEventListener('hoverOff', function(e) {
+        e.target.classList.remove('hover');
+    });
+
+  
+  restart.addEventListener('click', restartGame);
+  statusMsg.textContent = `${firstPlayer}'s turn!`;
+}
+
+  function clickedCell(){
+    const cell = this.getAttribute 
   
 });
