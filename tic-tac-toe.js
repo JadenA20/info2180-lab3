@@ -20,6 +20,7 @@ document.addEventListener(`DOMContentLoaded`, function() {
     [2, 4, 6]
   ];
 
+  
 //Creating array for options + creating player X and O
 let cellOptions = Array(9).fill(null);
 
@@ -28,7 +29,7 @@ const playerO = "O";
 
 let currentPlayer = playerX;
 
-
+  
 //Implements cursor hover features
   gridCells.forEach((square, cell) => {
     
@@ -45,15 +46,24 @@ let currentPlayer = playerX;
 
         //Adding X or O to the board
         if (currentCell.textContent != "X" && currentCell.textContent != "O") {
-          currentCell.textContent = currentPlayer;
-          currentCell.classList.add(currentPlayer);
-          cellOptions[cell] = currentPlayer;
-        }
+          currentCell.textContent = currentPlayer
+          currentCell.classList.add(currentPlayer)
+          cellOptions[cell] = currentPlayer
 
-      else {
-        //Ensures each player takes turns 
-        currentPlayer =  currentPlayer === playerX? playerO:playerX;
-      }
+            if (verifyWin == true) {
+  
+            }
+  
+            else if (verifyDraw == true) {
+              
+            }
+  
+            else {
+              //Ensures each player takes turns 
+              currentPlayer =  currentPlayer === playerX? playerO:playerX;
+            }
+
+        }
       
     });
 
