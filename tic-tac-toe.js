@@ -29,7 +29,7 @@ const playerO = "O";
 let firstPlayer = playerX;
 
 
-function setUpGame(){
+
   gridCells.forEach((square, cell) => {
     
     square.addEventListener(`hoverOn`, function(e) {
@@ -40,7 +40,23 @@ function setUpGame(){
         e.target.classList.remove(`hover`);
     });
 
+    
+    square.addEventListener(`click`, function(e){
+            let currentCell = e.target
+
+    });
+    
   
+
+
+
+function verifyWinner()
+
+
+function verifyDraw()
+
+
+function restartGame()
  /* restart.addEventListener('click', restartGame);
   statusMsg.textContent = `${firstPlayer}'s turn!`;
 }
