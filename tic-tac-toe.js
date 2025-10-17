@@ -29,24 +29,24 @@ const playerO = "O";
 let firstPlayer = playerX;
 
 
-/*
+
   gridCells.forEach((square, cell) => {
     
-    square.addEventListener(`hoverOn`, function(e) {
+    square.addEventListener(`mouseenter`, function(e) {
         e.target.classList.add(`hover`);
     });
 
-    square.addEventListener(`hoverOff`, function(e) {
+    square.addEventListener(`mouseleave`, function(e) {
         e.target.classList.remove(`hover`);
     });
 
-    
     square.addEventListener(`click`, function(e){
             let currentCell = e.target
-
     });
+
     
-  
+  });
+/*  
 
 
 
