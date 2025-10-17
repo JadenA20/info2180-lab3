@@ -49,6 +49,11 @@ let currentPlayer = playerX;
           currentCell.classList.add(currentPlayer);
           cellOptions[cell] = currentPlayer;
         }
+
+      else {
+        //Ensures each player takes turns 
+        currentPlayer =  currentPlayer === playerX? playerO:playerX;
+      }
       
     });
 
