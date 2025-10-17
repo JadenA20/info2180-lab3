@@ -32,20 +32,21 @@ let firstPlayer = playerX;
 function setUpGame(){
   gridCells = forEach((square, cell) => {
     
-    square.addEventListener('hoverOn', function(e) {
-        e.target.classList.add('hover');
+    square.addEventListener(`hoverOn`, function(e) {
+        e.target.classList.add(`hover`);
     });
 
-    square.addEventListener('hoverOff', function(e) {
-        e.target.classList.remove('hover');
+    square.addEventListener(`hoverOff`, function(e) {
+        e.target.classList.remove(`hover`);
     });
 
   
-  restart.addEventListener('click', restartGame);
+ /* restart.addEventListener('click', restartGame);
   statusMsg.textContent = `${firstPlayer}'s turn!`;
 }
 
   function clickedCell(){
     const cell = this.getAttribute 
-  
+  */
+    
 });
