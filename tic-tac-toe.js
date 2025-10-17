@@ -3,11 +3,11 @@
 
 document.addEventListener(`DOMContentLoaded`, function() {
                           
-  const gridCells = document.querySelectorAll(`#board`);
-  const statusMsg = document.getElementById(`#status`);
+  const gridCells = document.querySelectorAll(`#board div`);
+  const statusMsg = document.getElementById(`status`);
   const restart = document.getElementsByClassName(`btn`)[0];
   
-  gridCells.forEach(square => square.classList.add(`cell`));
+  gridCells.forEach(square => square.classList.add(`square`));
   
   const winCombinations = [
     [0, 1, 2].
