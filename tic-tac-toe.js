@@ -20,16 +20,16 @@ document.addEventListener(`DOMContentLoaded`, function() {
     [2, 4, 6]
   ];
 
-
+//Creating array for options + creating player X and O
 let cellOptions = Array(9).fill(null);
 
 const playerX = "X";
 const playerO = "O";
 
-let firstPlayer = playerX;
+let currentPlayer = playerX;
 
 
-
+//Implements cursor hover features
   gridCells.forEach((square, cell) => {
     
     square.addEventListener(`mouseenter`, function(e) {
@@ -41,11 +41,23 @@ let firstPlayer = playerX;
     });
 
     square.addEventListener(`click`, function(e){
-            let currentCell = e.target
+        let currentCell = e.target
+
+        //Adding X or O to the board
+        if (currentCell.textContent != "X" && currentCell.textContent != "O" {
+          currentCell.textContent = currentPlayer;
+          currentCell.classList.add(currentPlayer);
+          cellOptions[cell] = currentPlayer;
+        }
+      
     });
 
     
   });
+
+
+
+  
 /*  
 
 
