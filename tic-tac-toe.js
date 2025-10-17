@@ -1,13 +1,13 @@
 //Name: Jaden Anthony
 //ID: 620164510
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener(`DOMContentLoaded`, function() {
                           
-  const gridCells = document.querySelectorAll('#board');
-  const statusMsg = document.getElementById('#status');
-  const restart = document.getElementsByClassName('btn')[0];
+  const gridCells = document.querySelectorAll(`#board`);
+  const statusMsg = document.getElementById(`#status`);
+  const restart = document.getElementsByClassName(`btn`)[0];
   
-  gridCells.forEach(square => square.classList.add('cell'));
+  gridCells.forEach(square => square.classList.add(`cell`));
   
   const winCombinations = [
     [0, 1, 2].
@@ -19,4 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     [0, 4, 8],
     [2, 4, 6]
   ];
+
+
+
+  
 }
