@@ -44,7 +44,7 @@ let currentPlayer = playerX;
         let currentCell = e.target
 
         //Adding X or O to the board
-        if (currentCell.textContent != "X" && currentCell.textContent != "O" {
+        if (currentCell.textContent != "X" && currentCell.textContent != "O") {
           currentCell.textContent = currentPlayer;
           currentCell.classList.add(currentPlayer);
           cellOptions[cell] = currentPlayer;
