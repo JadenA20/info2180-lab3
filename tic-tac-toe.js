@@ -29,6 +29,9 @@ const playerO = "O";
 
 let currentPlayer = playerX;
 
+
+//Verification Functions
+
   
 //Implements cursor hover features
   gridCells.forEach((square, cell) => {
