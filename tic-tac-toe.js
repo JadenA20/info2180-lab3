@@ -29,7 +29,7 @@ const playerO = "O";
 let firstPlayer = playerX;
 
 
-
+/*
   gridCells.forEach((square, cell) => {
     
     square.addEventListener(`hoverOn`, function(e) {
