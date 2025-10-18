@@ -32,6 +32,7 @@ let currentPlayer = playerX;
 
 //Verification Functions
 function verifyWin(){
+  //Loops through each possible win combination 
   for (const combo of winCombinations) {
     let [a, b, c] = combo;
     if (cellOptions[a] === currentPlayer && cellOptions[b] === currentPlayer && cellOptions[c] === currentPlayer) { 
@@ -44,6 +45,14 @@ function verifyWin(){
 
 function verifyDraw(){
 
+}
+
+function restartGame(){
+  let cellOptions = Array(9).fill(null);
+  gridCells.forEach(square => square.textContent = "");
+  gridCells.forEach(square => square.className = 'square');
+  gridCells.forEach(square => square.classList.add(`square`));
+  
 }
   
 //Implements cursor hover features
@@ -72,7 +81,7 @@ function verifyDraw(){
             }
   
             else if (verifyDraw()) {
-              
+              statusMsg.textContent = `Whoops! It's a draw!`;
             }
   
             else {
@@ -87,5 +96,7 @@ function verifyDraw(){
     
   });
 
+  //To restart the game
+  restart.addEventListener('click', restartGame);
     
 });
