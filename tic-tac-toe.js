@@ -32,7 +32,7 @@ let currentPlayer = playerX;
 
 //Verification Functions
 function verifyWin(){
-  for (const combo in winCombinations) {
+  for (const combo of winCombinations) {
     let [a, b, c] = combo;
     if (cellOptions[a] === currentPlayer && cellOptions[b] === currentPlayer && cellOptions[c] === currentPlayer) { 
       return true
@@ -64,18 +64,18 @@ function verifyWin(){
           currentCell.classList.add(currentPlayer)
           cellOptions[cell] = currentPlayer
 
-            if (verifyWin == true) {
+            if (verifyWin()) {
               statusMsg.textContent = `Congratulations! ${currentPlayer} is the winner!`;
               statusMsg.classList.add(`you-won`);
             }
   
-            else if (verifyDraw == true) {
+            else if (verifyDraw()) {
               
             }
   
             else {
               //Ensures each player takes turns 
-              currentPlayer =  currentPlayer === playerX? playerO:playerX;
+              currentPlayer = currentPlayer === playerX ? playerO : playerX;
             }
 
         }
@@ -85,26 +85,5 @@ function verifyWin(){
     
   });
 
-
-
-  
-/*  
-
-
-
-function verifyWinner()
-
-
-function verifyDraw()
-
-
-function restartGame()
- /* restart.addEventListener('click', restartGame);
-  statusMsg.textContent = `${firstPlayer}'s turn!`;
-}
-
-  function clickedCell(){
-    const cell = this.getAttribute 
-  */
     
 });
