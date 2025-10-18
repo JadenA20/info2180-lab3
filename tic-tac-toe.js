@@ -37,11 +37,13 @@ function verifyWin(){
     if (cellOptions[a] === currentPlayer && cellOptions[b] === currentPlayer && cellOptions[c] === currentPlayer) { 
       return true
     }
-    else {
-      return false;
-    }
-    
   }
+    return false;
+}
+
+
+function verifyDraw(){
+
 }
   
 //Implements cursor hover features
