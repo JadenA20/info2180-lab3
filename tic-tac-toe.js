@@ -44,14 +44,20 @@ function verifyWin(){
 
 
 function verifyDraw(){
-
+  //Checks if all possible entries are made and there is no no winning combination
+  if (cellOptions.every(square => square !== null) && !verifyWin()) {
+    return true
 }
 
 function restartGame(){
-  let cellOptions = Array(9).fill(null);
+  cellOptions = Array(9).fill(null);
   gridCells.forEach(square => square.textContent = "");
   gridCells.forEach(square => square.className = 'square');
   gridCells.forEach(square => square.classList.add(`square`));
+
+  currentPlayer = playerX;
+  statusMsg.textContent = `Move your mouse over a square and click to play an X or an O.`;
+  statusMsg.classList.remove(`you-won`);
   
 }
   
@@ -82,6 +88,7 @@ function restartGame(){
   
             else if (verifyDraw()) {
               statusMsg.textContent = `Whoops! It's a draw!`;
+              statusMsg.classList.add(`you-won`);
             }
   
             else {
