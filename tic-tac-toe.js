@@ -31,7 +31,18 @@ let currentPlayer = playerX;
 
 
 //Verification Functions
-
+function verifyWin(){
+  for (const combo in winCombinations) {
+    let [a, b, c] = combo;
+    if (cellOptions[a] === currentPlayer && cellOptions[b] === currentPlayer && cellOptions[c] === currentPlayer) { 
+      return true
+    }
+    else {
+      return false;
+    }
+    
+  }
+}
   
 //Implements cursor hover features
   gridCells.forEach((square, cell) => {
@@ -54,7 +65,8 @@ let currentPlayer = playerX;
           cellOptions[cell] = currentPlayer
 
             if (verifyWin == true) {
-  
+              statusMsg.textContent = `Congratulations! ${currentPlayer} is the winner!`;
+              statusMsg.classList.add(`you-won`);
             }
   
             else if (verifyDraw == true) {
