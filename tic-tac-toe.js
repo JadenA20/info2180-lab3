@@ -45,8 +45,8 @@ function verifyWin(){
 
 function verifyDraw(){
   //Checks if all possible entries are made and there is no no winning combination
-  if (cellOptions.every(square => square !== null) && !verifyWin()) {
-    return true
+  /*if (cellOptions.every(square => square !== null) && !verifyWin()) {
+    return true*/
 }
 
 function restartGame(){
